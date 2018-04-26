@@ -1,0 +1,1 @@
+scp -r kaokeadmin/ root@111.230.223.219:../home/www/

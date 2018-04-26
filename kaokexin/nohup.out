@@ -1,0 +1,598 @@
+[2018-04-17 14:16:32 +0800] [17446] [INFO] Starting gunicorn 19.7.1
+[2018-04-17 14:16:32 +0800] [17446] [INFO] Listening at: http://127.0.0.1:8080 (17446)
+[2018-04-17 14:16:32 +0800] [17446] [INFO] Using worker: sync
+[2018-04-17 14:16:32 +0800] [17449] [INFO] Booting worker with pid: 17449
+[2018-04-17 14:16:32 +0800] [17450] [INFO] Booting worker with pid: 17450
+[2018-04-17 14:16:32 +0800] [17451] [INFO] Booting worker with pid: 17451
+[2018-04-17 14:16:32 +0800] [17452] [INFO] Booting worker with pid: 17452
+[2018-04-17 14:16:33 +0800] [17450] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Python/2.7/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/manage.py", line 3, in <module>
+    from app import create_app, db
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/__init__.py", line 7, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-17 14:16:33 +0800] [17449] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Python/2.7/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/manage.py", line 3, in <module>
+    from app import create_app, db
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/__init__.py", line 7, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-17 14:16:33 +0800] [17450] [INFO] Worker exiting (pid: 17450)
+[2018-04-17 14:16:33 +0800] [17449] [INFO] Worker exiting (pid: 17449)
+[2018-04-17 14:16:33 +0800] [17451] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Python/2.7/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/manage.py", line 3, in <module>
+    from app import create_app, db
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/__init__.py", line 7, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-17 14:16:33 +0800] [17451] [INFO] Worker exiting (pid: 17451)
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 203, in run
+    super(Application, self).run()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 231, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 344, in halt
+    self.stop()
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 393, in stop
+    time.sleep(0.1)
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2018-04-17 14:16:33 +0800] [17452] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Python/2.7/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/manage.py", line 3, in <module>
+    from app import create_app, db
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/__init__.py", line 7, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-17 14:16:33 +0800] [17452] [INFO] Worker exiting (pid: 17452)
+[2018-04-17 14:28:05 +0800] [17620] [INFO] Starting gunicorn 19.7.1
+[2018-04-17 14:28:05 +0800] [17620] [INFO] Listening at: http://127.0.0.1:8080 (17620)
+[2018-04-17 14:28:05 +0800] [17620] [INFO] Using worker: sync
+[2018-04-17 14:28:05 +0800] [17623] [INFO] Booting worker with pid: 17623
+[2018-04-17 14:28:05 +0800] [17624] [INFO] Booting worker with pid: 17624
+[2018-04-17 14:28:05 +0800] [17625] [INFO] Booting worker with pid: 17625
+[2018-04-17 14:28:05 +0800] [17626] [INFO] Booting worker with pid: 17626
+[2018-04-17 14:28:05 +0800] [17624] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Python/2.7/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/manage.py", line 3, in <module>
+    from app import create_app, db
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/__init__.py", line 7, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-17 14:28:05 +0800] [17623] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Python/2.7/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/manage.py", line 3, in <module>
+    from app import create_app, db
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/__init__.py", line 7, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-17 14:28:05 +0800] [17625] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Python/2.7/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/manage.py", line 3, in <module>
+    from app import create_app, db
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/__init__.py", line 7, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-17 14:28:05 +0800] [17623] [INFO] Worker exiting (pid: 17623)
+[2018-04-17 14:28:05 +0800] [17624] [INFO] Worker exiting (pid: 17624)
+[2018-04-17 14:28:05 +0800] [17625] [INFO] Worker exiting (pid: 17625)
+Traceback (most recent call last):
+  File "/usr/local/bin/gunicorn", line 11, in <module>
+    sys.exit(run())
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 74, in run
+    WSGIApplication("%(prog)s [OPTIONS] [APP_MODULE]").run()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 203, in run
+    super(Application, self).run()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 72, in run
+    Arbiter(self).run()
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 231, in run
+    self.halt(reason=inst.reason, exit_status=inst.exit_status)
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 344, in halt
+    self.stop()
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 390, in stop
+    self.kill_workers(sig)
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 621, in kill_workers
+    self.kill_worker(pid, sig)
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 636, in kill_worker
+    worker.tmp.close()
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 244, in handle_chld
+    self.reap_workers()
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 524, in reap_workers
+    raise HaltServer(reason, self.WORKER_BOOT_ERROR)
+gunicorn.errors.HaltServer: <HaltServer 'Worker failed to boot.' 3>
+[2018-04-17 14:28:05 +0800] [17626] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/arbiter.py", line 578, in spawn_worker
+    worker.init_process()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 126, in init_process
+    self.load_wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/base.py", line 135, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 65, in load
+    return self.load_wsgiapp()
+  File "/Library/Python/2.7/site-packages/gunicorn/app/wsgiapp.py", line 52, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/Library/Python/2.7/site-packages/gunicorn/util.py", line 352, in import_app
+    __import__(module)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/manage.py", line 3, in <module>
+    from app import create_app, db
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/__init__.py", line 7, in <module>
+    import pymysql
+ImportError: No module named pymysql
+[2018-04-17 14:28:05 +0800] [17626] [INFO] Worker exiting (pid: 17626)
+[2018-04-17 14:30:40 +0800] [17643] [INFO] Starting gunicorn 19.7.1
+[2018-04-17 14:30:40 +0800] [17643] [INFO] Listening at: http://127.0.0.1:8080 (17643)
+[2018-04-17 14:30:40 +0800] [17643] [INFO] Using worker: sync
+[2018-04-17 14:30:40 +0800] [17646] [INFO] Booting worker with pid: 17646
+[2018-04-17 14:30:40 +0800] [17647] [INFO] Booting worker with pid: 17647
+[2018-04-17 14:30:40 +0800] [17648] [INFO] Booting worker with pid: 17648
+[2018-04-17 14:30:40 +0800] [17649] [INFO] Booting worker with pid: 17649
+[2018-04-17 15:30:31 +0800] [17648] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/admin/views.py", line 6, in index
+    return render_template('admin/index.html')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: admin.html
+[2018-04-17 15:30:31 +0800] [17647] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/admin/views.py", line 6, in index
+    return render_template('admin/index.html')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: admin.html
+[2018-04-17 15:30:31 +0800] [17649] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/admin/views.py", line 6, in index
+    return render_template('admin/index.html')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: admin.html
+[2018-04-17 15:30:31 +0800] [17648] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/admin/views.py", line 6, in index
+    return render_template('admin/index.html')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: admin.html
+[2018-04-17 15:30:32 +0800] [17649] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/admin/views.py", line 6, in index
+    return render_template('admin/index.html')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: admin.html
+[2018-04-17 15:30:37 +0800] [17648] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/admin/views.py", line 6, in index
+    return render_template('admin/index.html')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: admin.html
+[2018-04-17 15:30:45 +0800] [17648] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/admin/views.py", line 6, in index
+    return render_template('admin/index.html')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: admin.html
+[2018-04-17 15:31:15 +0800] [17647] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 135, in handle
+    self.handle_request(listener, req, client, addr)
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 191, in handle_request
+    six.reraise(*sys.exc_info())
+  File "/Library/Python/2.7/site-packages/gunicorn/workers/sync.py", line 176, in handle_request
+    respiter = self.wsgi(environ, resp.start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1836, in __call__
+    return self.wsgi_app(environ, start_response)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1820, in wsgi_app
+    response = self.make_response(self.handle_exception(e))
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1403, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Python/2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/pete/Documents/GitHub/kaokeserver/kaokeapp/app/admin/views.py", line 6, in index
+    return render_template('admin/index.html')
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 127, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 851, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 812, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Library/Python/2.7/site-packages/jinja2/environment.py", line 774, in _load_template
+    cache_key = self.loader.get_source(self, name)[1]
+  File "/Library/Python/2.7/site-packages/flask/templating.py", line 64, in get_source
+    raise TemplateNotFound(template)
+TemplateNotFound: admin.html
+[2018-04-17 15:32:19 +0800] [17643] [INFO] Handling signal: term
+[2018-04-17 15:32:19 +0800] [17648] [INFO] Worker exiting (pid: 17648)
+[2018-04-17 15:32:19 +0800] [17649] [INFO] Worker exiting (pid: 17649)
+[2018-04-17 15:32:19 +0800] [17647] [INFO] Worker exiting (pid: 17647)
+[2018-04-17 15:32:19 +0800] [17646] [INFO] Worker exiting (pid: 17646)
+[2018-04-17 15:32:19 +0800] [17643] [INFO] Shutting down: Master
+[2018-04-17 15:32:29 +0800] [19964] [INFO] Starting gunicorn 19.7.1
+[2018-04-17 15:32:29 +0800] [19964] [INFO] Listening at: http://127.0.0.1:8080 (19964)
+[2018-04-17 15:32:29 +0800] [19964] [INFO] Using worker: sync
+[2018-04-17 15:32:29 +0800] [19967] [INFO] Booting worker with pid: 19967
+[2018-04-17 15:32:29 +0800] [19968] [INFO] Booting worker with pid: 19968
+[2018-04-17 15:32:29 +0800] [19970] [INFO] Booting worker with pid: 19970
+[2018-04-17 15:32:29 +0800] [19971] [INFO] Booting worker with pid: 19971
+[2018-04-17 21:48:16 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:19968)
+[2018-04-17 21:48:16 +0800] [19968] [INFO] Worker exiting (pid: 19968)
+[2018-04-17 21:48:17 +0800] [22408] [INFO] Booting worker with pid: 22408
+[2018-04-18 07:06:10 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:22408)
+[2018-04-18 07:06:11 +0800] [22408] [INFO] Worker exiting (pid: 22408)
+[2018-04-18 07:06:12 +0800] [22430] [INFO] Booting worker with pid: 22430
+[2018-04-18 07:52:21 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:19970)
+[2018-04-18 07:52:21 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:19971)
+[2018-04-18 07:52:21 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:22430)
+[2018-04-18 07:52:21 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:19967)
+[2018-04-18 07:52:21 +0800] [22430] [INFO] Worker exiting (pid: 22430)
+[2018-04-18 07:52:21 +0800] [19970] [INFO] Worker exiting (pid: 19970)
+[2018-04-18 07:52:21 +0800] [19967] [INFO] Worker exiting (pid: 19967)
+[2018-04-18 07:52:21 +0800] [19971] [INFO] Worker exiting (pid: 19971)
+[2018-04-18 07:52:22 +0800] [23136] [INFO] Booting worker with pid: 23136
+[2018-04-18 07:52:22 +0800] [23137] [INFO] Booting worker with pid: 23137
+[2018-04-18 07:52:22 +0800] [23138] [INFO] Booting worker with pid: 23138
+[2018-04-18 07:52:22 +0800] [23139] [INFO] Booting worker with pid: 23139
+[2018-04-18 10:50:48 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:23136)
+[2018-04-18 10:50:48 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:23137)
+[2018-04-18 10:50:48 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:23138)
+[2018-04-18 10:50:48 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:23139)
+[2018-04-18 10:50:48 +0800] [23136] [INFO] Worker exiting (pid: 23136)
+[2018-04-18 10:50:48 +0800] [23137] [INFO] Worker exiting (pid: 23137)
+[2018-04-18 10:50:48 +0800] [23138] [INFO] Worker exiting (pid: 23138)
+[2018-04-18 10:50:48 +0800] [23139] [INFO] Worker exiting (pid: 23139)
+[2018-04-18 10:50:48 +0800] [23180] [INFO] Booting worker with pid: 23180
+[2018-04-18 10:50:48 +0800] [23181] [INFO] Booting worker with pid: 23181
+[2018-04-18 10:50:48 +0800] [23183] [INFO] Booting worker with pid: 23183
+[2018-04-18 10:50:48 +0800] [23185] [INFO] Booting worker with pid: 23185
+[2018-04-19 08:29:00 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:23185)
+[2018-04-19 08:29:00 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:23180)
+[2018-04-19 08:29:00 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:23181)
+[2018-04-19 08:29:00 +0800] [19964] [CRITICAL] WORKER TIMEOUT (pid:23183)
+[2018-04-19 08:29:00 +0800] [23185] [INFO] Worker exiting (pid: 23185)
+[2018-04-19 08:29:00 +0800] [23183] [INFO] Worker exiting (pid: 23183)
+[2018-04-19 08:29:00 +0800] [23180] [INFO] Worker exiting (pid: 23180)
+[2018-04-19 08:29:00 +0800] [23181] [INFO] Worker exiting (pid: 23181)
+[2018-04-19 08:29:00 +0800] [24083] [INFO] Booting worker with pid: 24083
+[2018-04-19 08:29:00 +0800] [24084] [INFO] Booting worker with pid: 24084
+[2018-04-19 08:29:00 +0800] [24085] [INFO] Booting worker with pid: 24085
+[2018-04-19 08:29:00 +0800] [24086] [INFO] Booting worker with pid: 24086
+[2018-04-19 08:29:43 +0800] [19964] [INFO] Handling signal: term
+[2018-04-19 08:29:43 +0800] [24083] [INFO] Worker exiting (pid: 24083)
+[2018-04-19 08:29:43 +0800] [24084] [INFO] Worker exiting (pid: 24084)
+[2018-04-19 08:29:43 +0800] [24085] [INFO] Worker exiting (pid: 24085)
+[2018-04-19 08:29:43 +0800] [24086] [INFO] Worker exiting (pid: 24086)
+[2018-04-19 08:29:43 +0800] [19964] [INFO] Shutting down: Master
